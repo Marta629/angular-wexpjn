@@ -10,7 +10,6 @@ import { Product, products } from '../products';
 })
 export class ProductListComponent {
   products = products;
-
   product: Product|undefined;
 
   constructor(
