@@ -9,12 +9,13 @@ import { Product } from '../products';
 })
 
 export class CartComponent {
-  items: Product[] = [];
+  //items: Product[] = [];
+  items = this.cartService.getItems();
 
   constructor(
     private cartService: CartService    
   ) { 
-    this.items = this.cartService.getItems();
+    //this.items = this.cartService.getItems();
   }
 
 }
