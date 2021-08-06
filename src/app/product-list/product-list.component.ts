@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { products } from '../products';
+import { Product, products } from '../products';
 
 @Component({
   selector: 'app-product-list',
@@ -10,8 +11,18 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
 
+  product: Product|undefined;
+
+  constructor(
+    private route: ActivatedRoute,
+  ) { }
+
   share() {
     window.alert('The product has been shared!');
+  }
+
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
   }
 }
 
