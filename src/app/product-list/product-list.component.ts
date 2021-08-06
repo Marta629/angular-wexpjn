@@ -10,7 +10,7 @@ import { Product, products } from '../products';
 })
 export class ProductListComponent {
   products = products;
-  product: Product|undefined;
+  product: Product | undefined;
 
   constructor(
     private route: ActivatedRoute,

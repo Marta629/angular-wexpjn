@@ -1,5 +1,9 @@
 <h3>Cart</h3>
 
+<p *ngIf="items.length == 0">
+  Your cart is empty.
+</p>
+
 <p>
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
@@ -25,6 +29,9 @@
     <input id="address" type="text" formControlName="address">
   </div>
 
-  <button class="button" type="submit">Purchase</button>
+  <!--<button class="button" type="submit">Purchase</button>-->
 
+  <p>
+    <a routerLink="/recap" class="button">Purchase</a>
+  </p>
 </form>
