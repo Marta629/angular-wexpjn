@@ -8,8 +8,9 @@ import { Product } from './products';
 export class CartService {
   items: Product[] = [];
 
-  addToCart(productt: Product) {
-    this.items.push(productt);
+  addToCart(product: Product | undefined) {
+    if (product)
+      this.items.push(product);
   }
 
   getItems() {
