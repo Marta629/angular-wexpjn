@@ -10,8 +10,8 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  product: Product | undefined; ////
-  productt!: Product; ////
+  productt: Product | undefined; ////
+  product!: Product; ////
 
   constructor(
     private route: ActivatedRoute,
@@ -24,11 +24,11 @@ export class ProductDetailsComponent implements OnInit {
     const productIdFromRoute = Number(routeParams.get('productId'));
   
     // Find the product that correspond with the id provided in route.
-    this.product = products.find(product => product.id === productIdFromRoute);
+    this.productt = products.find(productt => productt.id === productIdFromRoute);
   }
 
   addToCart(product: Product) {
-    this.cartService.addToCart(productt);
+    this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!');
   }
 
