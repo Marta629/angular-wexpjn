@@ -36,6 +36,7 @@ import { RecapComponent } from './recap/recap.component';
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
+    RecapComponent,
   ],
   bootstrap: [
     AppComponent
